@@ -243,6 +243,254 @@ paths:
           description: OK
       tags:
       - Portfolios
+  /?Action=DisassociateProductFromPortfolio:
+    get:
+      summary: Disassociate Product From Portfolio
+      description: Disassociates the specified product from the specified portfolio.
+      operationId: disassociateProductFromPortfolio
+      x-api-path-slug: actiondisassociateproductfromportfolio-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      - in: query
+        name: ProductId
+        description: The product identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=ListAcceptedPortfolioShares:
+    get:
+      summary: List Accepted Portfolio Shares
+      description: |-
+        Lists details of all portfolios for which sharing was accepted by this
+                 account.
+      operationId: listAcceptedPortfolioShares
+      x-api-path-slug: actionlistacceptedportfolioshares-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PageSize
+        description: The maximum number of items to return in the results
+        type: string
+      - in: query
+        name: PageToken
+        description: The page token of the first page retrieved
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=ListConstraintsForPortfolio:
+    get:
+      summary: List Constraints For Portfolio
+      description: |-
+        Retrieves detailed constraint information for the specified portfolio and
+                 product.
+      operationId: listConstraintsForPortfolio
+      x-api-path-slug: actionlistconstraintsforportfolio-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PageSize
+        description: The maximum number of items to return in the results
+        type: string
+      - in: query
+        name: PageToken
+        description: The page token of the first page retrieved
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      - in: query
+        name: ProductId
+        description: The product identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=ListPortfolioAccess:
+    get:
+      summary: List Portfolio Access
+      description: |-
+        Lists the account IDs that have been authorized sharing of the specified
+                 portfolio.
+      operationId: listPortfolioAccess
+      x-api-path-slug: actionlistportfolioaccess-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=ListPortfolios:
+    get:
+      summary: List Portfolios
+      description: Lists all portfolios in the catalog.
+      operationId: listPortfolios
+      x-api-path-slug: actionlistportfolios-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PageSize
+        description: The maximum number of items to return in the results
+        type: string
+      - in: query
+        name: PageToken
+        description: The page token of the first page retrieved
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=ListPortfoliosForProduct:
+    get:
+      summary: List Portfolios For Product
+      description: Lists all portfolios that the specified product is associated with.
+      operationId: listPortfoliosForProduct
+      x-api-path-slug: actionlistportfoliosforproduct-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PageSize
+        description: The maximum number of items to return in the results
+        type: string
+      - in: query
+        name: PageToken
+        description: The page token of the first page retrieved
+        type: string
+      - in: query
+        name: ProductId
+        description: The product identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=ListPrincipalsForPortfolio:
+    get:
+      summary: List Principals For Portfolio
+      description: Lists all principal ARNs associated with the specified portfolio.
+      operationId: listPrincipalsForPortfolio
+      x-api-path-slug: actionlistprincipalsforportfolio-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PageSize
+        description: The maximum number of items to return in the results
+        type: string
+      - in: query
+        name: PageToken
+        description: The page token of the first page retrieved
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=RejectPortfolioShare:
+    get:
+      summary: Reject Portfolio Share
+      description: Rejects an offer to share a portfolio.
+      operationId: rejectPortfolioShare
+      x-api-path-slug: actionrejectportfolioshare-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=UpdatePortfolio:
+    get:
+      summary: Update Portfolio
+      description: Updates the specified portfolio's details.
+      operationId: updatePortfolio
+      x-api-path-slug: actionupdateportfolio-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: AddTags
+        description: Tags to add to the existing list of tags associated with the
+          portfolio
+        type: string
+      - in: query
+        name: Description
+        description: The updated text description of the portfolio
+        type: string
+      - in: query
+        name: DisplayName
+        description: The name to use for display purposes
+        type: string
+      - in: query
+        name: Id
+        description: The identifier of the portfolio for the update request
+        type: string
+      - in: query
+        name: ProviderName
+        description: The updated name of the portfolio provider
+        type: string
+      - in: query
+        name: RemoveTags
+        description: Tags to remove from the existing list of tags associated with
+          the         portfolio
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -399,6 +399,96 @@ paths:
           description: OK
       tags:
       - Portfolios
+  /?Action=ListPrincipalsForPortfolio:
+    get:
+      summary: List Principals For Portfolio
+      description: Lists all principal ARNs associated with the specified portfolio.
+      operationId: listPrincipalsForPortfolio
+      x-api-path-slug: actionlistprincipalsforportfolio-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PageSize
+        description: The maximum number of items to return in the results
+        type: string
+      - in: query
+        name: PageToken
+        description: The page token of the first page retrieved
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=RejectPortfolioShare:
+    get:
+      summary: Reject Portfolio Share
+      description: Rejects an offer to share a portfolio.
+      operationId: rejectPortfolioShare
+      x-api-path-slug: actionrejectportfolioshare-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: PortfolioId
+        description: The portfolio identifier
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
+  /?Action=UpdatePortfolio:
+    get:
+      summary: Update Portfolio
+      description: Updates the specified portfolio's details.
+      operationId: updatePortfolio
+      x-api-path-slug: actionupdateportfolio-get
+      parameters:
+      - in: query
+        name: AcceptLanguage
+        description: The language code to use for this operation
+        type: string
+      - in: query
+        name: AddTags
+        description: Tags to add to the existing list of tags associated with the
+          portfolio
+        type: string
+      - in: query
+        name: Description
+        description: The updated text description of the portfolio
+        type: string
+      - in: query
+        name: DisplayName
+        description: The name to use for display purposes
+        type: string
+      - in: query
+        name: Id
+        description: The identifier of the portfolio for the update request
+        type: string
+      - in: query
+        name: ProviderName
+        description: The updated name of the portfolio provider
+        type: string
+      - in: query
+        name: RemoveTags
+        description: Tags to remove from the existing list of tags associated with
+          the         portfolio
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Portfolios
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
